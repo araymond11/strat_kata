@@ -1,0 +1,25 @@
+<div class="app_container">
+  <div class="logo_container">
+    <img src="assets/images/logo.png" width="200" height="100"/>
+  </div>
+  <div class="data_container">
+    <table cellspacing="0" cellpadding="0" class="data_table">
+      <thead>
+        <tr class="table_header">
+          <th id="first_column">DAY</th>
+          <th id="second_column">MAX</th>
+          <th id="third_column">MIN</th>
+          <th id="fourth_column">DIFFERENCE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let obj of data;'>
+          <th><input class="display_input" type="text" name="day" [(ngModel)]="obj.day"></th>
+          <th><input class="display_input" type="text" name="maxTemp" [(ngModel)]="obj.max"></th>
+          <th><input class="display_input" type="text" name="minTemp" [(ngModel)]="obj.min"></th>
+          <th><input class="display_input" type="text" name="tempDif" [(ngModel)]="obj.difference"></th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
